@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #f0fdf6;
+  --color-brand-100: #dcfcec;
+  --color-brand-200: #b8f5d8;
+  --color-brand-300: #84e8be;
+  --color-brand-400: #4dd3a0;
+  --color-brand-500: #22b886;
+  --color-brand-600: #149970;
+  --color-brand-700: #117a5c;
+  --color-brand-800: #11604b;
+  --color-brand-900: #0f4f3f;
+  --color-brand-950: #062c24;
+
+  --color-ink-50: #f6f7f9;
+  --color-ink-100: #eceef2;
+  --color-ink-200: #d4d8e0;
+  --color-ink-300: #aab2c2;
+  --color-ink-400: #7c879e;
+  --color-ink-500: #5d6882;
+  --color-ink-600: #485269;
+  --color-ink-700: #3a4256;
+  --color-ink-800: #262b3a;
+  --color-ink-900: #181b26;
+  --color-ink-950: #0c0e15;
+
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Sora", "Inter", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-ink-50);
+  color: var(--color-ink-800);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+.dark body {
+  background-color: var(--color-ink-950);
+  color: var(--color-ink-100);
+}
+
+@layer utilities {
+  .container-px {
+    @apply px-6 sm:px-8 lg:px-12;
+  }
+
+  .section {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-500 to-brand-700;
+  }
+}
