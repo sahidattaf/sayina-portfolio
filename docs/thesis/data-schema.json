@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "entities": {
+    "researchCycle": ["id", "title", "objective", "status", "progress", "deadline", "notes"],
+    "researchQuestion": ["id", "type", "text", "status", "approvedBy", "approvedAt"],
+    "source": ["id", "author", "year", "title", "journal", "doiOrUrl", "apa7", "verificationStatus", "qualityRating", "notes"],
+    "instrumentItem": ["id", "concept", "dimension", "indicator", "itemText", "scale", "sourceId", "approvalStatus"],
+    "finding": ["id", "questionId", "sourceDataId", "result", "interpretation", "confidence", "status"],
+    "gap": ["id", "theoreticalExpectation", "findingId", "evidence", "interpretation", "businessImplication"],
+    "recommendation": ["id", "title", "findingIds", "gapIds", "stakeholder", "action", "priority", "impact", "feasibility", "ethicalConsideration", "kpi", "period", "evidenceStatus"],
+    "risk": ["id", "title", "likelihood", "impact", "mitigation", "owner", "status"],
+    "decision": ["id", "date", "decision", "rationale", "evidenceLinks", "owner"],
+    "feedback": ["id", "date", "source", "comment", "action", "status", "cycleId"]
+  },
+  "rules": [
+    "A source defaults to unverified.",
+    "A finding requires authentic source data.",
+    "An evidence-based recommendation requires at least one findingId and one gapId.",
+    "Personally identifiable participant data must not be stored in the public application."
+  ]
+}
