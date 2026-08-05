@@ -14,6 +14,7 @@ Built with **React 19 + JavaScript (JSX) + Vite + Tailwind CSS v4 + React Router
   Operations Management analysis of Smullers Arnhem)
 - Downloadable CV link wired into the Navbar, Hero, and About page
 - Ready for deployment to **GitHub Pages** and **Vercel**
+- Interactive HAN Thesis Command Center with local progress tracking and JSON export
 
 ## 📁 Folder Structure
 
@@ -59,6 +60,7 @@ Client-side routing via `react-router-dom`, wrapped in a shared `Layout`
 | `/portfolio`       | Project list (filterable)  |
 | `/portfolio/:slug` | Project case study detail  |
 | `/contact`         | Contact                    |
+| `/thesis`          | HAN Thesis Command Center  |
 | `*`                | 404 Not Found              |
 
 ### Component Architecture

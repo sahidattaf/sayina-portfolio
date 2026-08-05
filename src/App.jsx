@@ -7,6 +7,7 @@ import Timeline from "./pages/Timeline";
 import Portfolio from "./pages/Portfolio";
 import ProjectDetail from "./pages/portfolio/ProjectDetail";
 import Contact from "./pages/Contact";
+import ThesisCommandCenter from "./pages/ThesisCommandCenter";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="portfolio/:slug" element={<ProjectDetail />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="thesis" element={<ThesisCommandCenter />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
